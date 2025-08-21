@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Creative Studio</title>
+  <meta name="description" content="Logo design, web development, video editing, audio, dubbing, scripts." />
+  <meta property="og:title" content="Services — Creative Studio">
+  <meta property="og:description" content="Logo design, web development, video editing, audio, dubbing, scripts." />
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0b12" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={ theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }, colors: { purpleBrand:'#a855f7', purpleDeep:'#7c3aed' } } } };</script>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  
+  <header id="app-header"></header>
+  <main id="main" class="pt-24">
+<div class="max-w-7xl mx-auto px-6 py-10">
+  <h1 class="text-3xl md:text-4xl font-bold text-center">Services</h1>
+  <p class="text-white/60 max-w-2xl mx-auto text-center">Pick just one or bundle them into a growth plan—flexible, transparent, fast.</p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+    <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">💻 Logo & Brand Identity</h3><p class="text-white/70">Distinct logos, color systems, and brand kits that scale across platforms.</p></div>
+    <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎨 Website Design & Dev</h3><p class="text-white/70">Fast, responsive, SEO-ready websites that convert visitors to customers.</p></div>
+    <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎬 Video Editing</h3><p class="text-white/70">Reels, promos, explainers—color, captions, and pacing dialed in.</p></div>
+    <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎵 Audio Editing</h3><p class="text-white/70">Noise cleanups, mixing, mastering, sound design, SFX.</p></div>
+    <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎵 Voice Dubbing</h3><p class="text-white/70">Multi-language VO & dubbing with broadcast-ready output.</p></div>
+    <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎬 Script Writing</h3><p class="text-white/70">Hooks and narratives that keep viewers watching and buyers buying.</p></div>
+  </div>
+  <div class="mt-14 max-w-3xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4">FAQs</h3>
+    <div class="card rounded-2xl p-4 faq">
+      <div class="faq-q flex items-center justify-between"><span class="font-semibold">How fast can you deliver?</span><span>+</span></div>
+      <div class="faq-a text-white/70">Most projects ship within 7–14 days depending on scope. Rush options available.</div>
+    </div>
+    <div class="card rounded-2xl p-4 mt-3 faq">
+      <div class="faq-q flex items-center justify-between"><span class="font-semibold">Do you offer revisions?</span><span>+</span></div>
+      <div class="faq-a text-white/70">Yes—each plan includes revisions. We iterate with clear milestones.</div>
+    </div>
+  </div>
+</div>
+</main>
+  <footer id="app-footer"></footer>
+  <button id="toTop" class="rounded-full p-3 bg-white/10 backdrop-blur border border-[var(--border)] hover:bg-white/15" aria-label="Scroll to top">↑</button>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

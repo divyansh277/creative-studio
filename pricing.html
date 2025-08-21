@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pricing — Creative Studio</title>
+  <meta name="description" content="Simple, transparent pricing for design, web, video and audio." />
+  <meta property="og:title" content="Pricing — Creative Studio">
+  <meta property="og:description" content="Simple, transparent pricing for design, web, video and audio." />
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0b12" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={ theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }, colors: { purpleBrand:'#a855f7', purpleDeep:'#7c3aed' } } } };</script>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  
+  <header id="app-header"></header>
+  <main id="main" class="pt-24">
+<div class="max-w-7xl mx-auto px-6 py-10 text-center">
+  <h1 class="text-3xl md:text-4xl font-bold">Simple, Transparent Pricing</h1>
+  <p class="text-white/60">Choose monthly or yearly and scale as you grow.</p>
+  <div class="mt-4 inline-flex items-center gap-2 border border-[var(--border)] rounded-full px-2 py-1">
+    <span class="text-sm">Monthly</span>
+    <label class="relative inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="billingToggle" class="sr-only peer">
+      <div class="w-12 h-6 bg-white/10 rounded-full peer-checked:bg-[var(--purple)] after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:h-5 after:w-5 after:rounded-full after:transition-all peer-checked:after:translate-x-6"></div>
+    </label>
+    <span class="text-sm">Yearly <span class="text-emerald-400">(save 15%)</span></span>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6 mt-8">
+    <div class="card rounded-2xl p-6">
+      <div class="flex items-center justify-between mb-2"><h3 class="font-semibold text-xl">Starter</h3><span class="text-sm text-white/60">Per project</span></div>
+      <div class="text-4xl font-extrabold"><span class="price" data-month="499" data-year="424">₹5,088</span></div>
+      <ul class="mt-4 space-y-2 text-white/70 text-sm"><li>Logo or 1 video (≤60s)</li><li>2 revisions</li><li>Basic social kit</li></ul>
+      <a href="/contact.html" class="mt-6 inline-block px-5 py-2 rounded-full bg-purpleDeep hover:bg-[var(--purple)]">Choose</a>
+    </div>
+    <div class="card rounded-2xl p-6 border-[var(--purple)]/50">
+      <div class="flex items-center justify-between mb-2"><h3 class="font-semibold text-xl">Pro</h3><span class="text-xs bg-[var(--purple)]/25 text-[var(--purple)] px-2 py-0.5 rounded">Popular</span></div>
+      <div class="text-4xl font-extrabold"><span class="price" data-month="599" data-year="509">₹6,108</span></div>
+      <ul class="mt-4 space-y-2 text-white/70 text-sm"><li>4 videos or 12 creatives</li><li>Landing page + style guide</li><li>Priority support</li></ul>
+      <a href="/contact.html" class="mt-6 inline-block px-5 py-2 rounded-full bg-purpleDeep hover:bg-[var(--purple)]">Choose</a>
+    </div>
+    <div class="card rounded-2xl p-6">
+      <div class="flex items-center justify-between mb-2"><h3 class="font-semibold text-xl">Business</h3><span class="text-sm text-white/60">Per month</span></div>
+      <div class="text-4xl font-extrabold"><span class="price" data-month="999" data-year="849">₹10188</span></div>
+      <ul class="mt-4 space-y-2 text-white/70 text-sm"><li>Unlimited requests*</li><li>Website + SEO + Social</li><li>Dedicated manager</li></ul>
+      <a href="/contact.html" class="mt-6 inline-block px-5 py-2 rounded-full bg-purpleDeep hover:bg-[var(--purple)]">Choose</a>
+    </div>
+  </div>
+  <p class="text-xs text-white/50 mt-3">*Fair-use policy. Large app builds quoted separately.</p>
+</div>
+</main>
+  <footer id="app-footer"></footer>
+  <button id="toTop" class="rounded-full p-3 bg-white/10 backdrop-blur border border-[var(--border)] hover:bg-white/15" aria-label="Scroll to top">↑</button>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

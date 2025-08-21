@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Creative Studio — Design • Web • Video • Audio</title>
+  <meta name="description" content="Creative Studio: design, web, video, audio, dubbing & scripts. Everything your brand needs, in one place." />
+  <meta property="og:title" content="Creative Studio — Design • Web • Video • Audio">
+  <meta property="og:description" content="Creative Studio: design, web, video, audio, dubbing & scripts. Everything your brand needs, in one place." />
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0b12" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={ theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }, colors: { purpleBrand:'#a855f7', purpleDeep:'#7c3aed' } } } };</script>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <header id="app-header"></header>
+  <main id="main" class="pt-24">
+<section class='relative min-h-[92vh] grid place-items-center text-center px-6 overflow-hidden'>
+  <div class='max-w-3xl will-change-transform' id='heroParallax'>
+    <p class='text-[var(--purple)]/80 tracking-widest text-xs uppercase mb-4'>Design • Web • Video • Audio</p>
+    <h1 class='text-4xl md:text-6xl font-extrabold leading-tight gradient-text'>We Design. We Build. We Create.</h1>
+    <p class='mt-4 md:text-lg max-w-2xl mx-auto text-white/70'>Everything your brand needs in one place — logos, websites, high-impact videos, studio-grade audio, voice dubbing, and scripts that convert.</p>
+    <div class='mt-10 flex items-center justify-center gap-4'>
+      <a href='/contact.html' class='cta-btn inline-flex items-center gap-2 px-8 py-3 rounded-full bg-purpleDeep hover:bg-[var(--purple)] transition font-semibold shadow-lg shadow-[rgba(168,85,247,.25)]'>Get Started →</a>
+      <a href='/portfolio.html' class='inline-flex items-center gap-2 px-8 py-3 rounded-full border border-[var(--border)] hover:border-white/30'>See Work</a>
+    </div>
+  </div>
+  <div aria-hidden='true' class='pointer-events-none absolute -z-10 w-[60vmax] h-[60vmax] rounded-full bg-[radial-gradient(circle_at_center,_rgba(124,58,237,.14),_transparent_60%)] blur-3xl -top-32 -left-20'></div>
+  <div aria-hidden='true' class='pointer-events-none absolute -z-10 w-[50vmax] h-[50vmax] rounded-full bg-[radial-gradient(circle_at_center,_rgba(67,56,202,.14),_transparent_60%)] blur-3xl -bottom-40 -right-24'></div>
+</section>
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold">About Us</h2>
+      <p class="text-white/70 mt-3">We’re a nimble creative team building brands, experiences, and content that perform. From startups to enterprises, we deliver fast and iterate even faster.</p>
+      <div class="grid grid-cols-3 gap-4 mt-6">
+        <div class="card rounded-2xl p-5 text-center"><div class="text-3xl font-extrabold">150+</div><div class="text-sm text-white/60">Projects</div></div>
+        <div class="card rounded-2xl p-5 text-center"><div class="text-3xl font-extrabold">40+</div><div class="text-sm text-white/60">Brands</div></div>
+        <div class="card rounded-2xl p-5 text-center"><div class="text-3xl font-extrabold">5★</div><div class="text-sm text-white/60">Avg. rating</div></div>
+      </div>
+      <a href="/about.html" class="mt-6 inline-block px-5 py-2 rounded-full border border-[var(--border)] hover:border-white/30">Learn more</a>
+    </div>
+    <div class="space-y-4">
+      <div class="card rounded-2xl p-5"><h3 class="font-semibold text-lg">Our Mission</h3><p class="text-white/70 mt-2">Make premium creative accessible and fast without sacrificing craft.</p></div>
+      <div class="card rounded-2xl p-5"><h3 class="font-semibold text-lg">Timeline</h3><ul class="mt-3 space-y-2 text-white/70 text-sm"><li>2019 — Started as a two-person studio</li><li>2021 — Expanded into video & audio</li><li>2023 — Web & SEO offering launched</li><li>2025 — 150+ projects shipped</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-black/40">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold">Services</h2>
+    <p class="text-white/60 max-w-2xl mx-auto">Pick just one or bundle them into a growth plan—flexible, transparent, fast.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">💻 Logo & Brand Identity</h3><p class="text-white/70">Distinct logos, color systems, and brand kits that scale across platforms.</p></div>
+      <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎨 Website Design & Dev</h3><p class="text-white/70">Fast, responsive, SEO-ready websites that convert visitors to customers.</p></div>
+      <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎬 Video Editing</h3><p class="text-white/70">Reels, promos, explainers—color, captions, and pacing dialed in.</p></div>
+      <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎵 Audio Editing</h3><p class="text-white/70">Noise cleanups, mixing, mastering, sound design, SFX.</p></div>
+      <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎵 Voice Dubbing</h3><p class="text-white/70">Multi-language VO & dubbing with broadcast-ready output.</p></div>
+      <div class="card rounded-2xl p-6"><h3 class="font-semibold text-lg mb-2">🎬 Script Writing</h3><p class="text-white/70">Hooks and narratives that keep viewers watching and buyers buying.</p></div>
+    </div>
+    <a href="/services.html" class="inline-block mt-6 px-5 py-2 rounded-full border border-[var(--border)] hover:border-white/30">Explore all services</a>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold">Portfolio</h2>
+        <p class="text-white/60">Tap any image to view.</p>
+      </div>
+      <a href="/portfolio.html" class="px-4 py-2 rounded-full border border-[var(--border)] hover:border-white/30">Open portfolio →</a>
+    </div>
+    <div id="portfolioGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop" alt="Logo Design" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop" alt="Website UI" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1200&auto=format&fit=crop" alt="Video Editing" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img">
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-black/40">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold">Simple, Transparent Pricing</h2>
+    <p class="text-white/60">Choose monthly or yearly and scale as you grow.</p>
+    <div class="mt-4 inline-flex items-center gap-2 border border-[var(--border)] rounded-full px-2 py-1">
+      <span class="text-sm">Monthly</span>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="billingToggle" class="sr-only peer">
+        <div class="w-12 h-6 bg-white/10 rounded-full peer-checked:bg-[var(--purple)] after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:h-5 after:w-5 after:rounded-full after:transition-all peer-checked:after:translate-x-6"></div>
+      </label>
+      <span class="text-sm">Yearly <span class="text-emerald-400">(save 15%)</span></span>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div class="card rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-semibold text-xl">Starter</h3><span class="text-sm text-white/60">Per project</span></div>
+        <div class="text-4xl font-extrabold"><span class="price" data-month="499" data-year="424">₹5,088</span></div>
+        <ul class="mt-4 space-y-2 text-white/70 text-sm"><li>Logo or 1 video (≤60s)</li><li>2 revisions</li><li>Basic social kit</li></ul>
+        <a href="/contact.html" class="mt-6 inline-block px-5 py-2 rounded-full bg-purpleDeep hover:bg-[var(--purple)]">Choose</a>
+      </div>
+      <div class="card rounded-2xl p-6 border-[var(--purple)]/50">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-semibold text-xl">Pro</h3><span class="text-xs bg-[var(--purple)]/25 text-[var(--purple)] px-2 py-0.5 rounded">Popular</span></div>
+        <div class="text-4xl font-extrabold"><span class="price" data-month="599" data-year="509">₹6,108</span></div>
+        <ul class="mt-4 space-y-2 text-white/70 text-sm"><li>4 videos or 12 creatives</li><li>Landing page + style guide</li><li>Priority support</li></ul>
+        <a href="/contact.html" class="mt-6 inline-block px-5 py-2 rounded-full bg-purpleDeep hover:bg-[var(--purple)]">Choose</a>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-semibold text-xl">Business</h3><span class="text-sm text-white/60">Per month</span></div>
+        <div class="text-4xl font-extrabold"><span class="price" data-month="999" data-year="849">₹10188</span></div>
+        <ul class="mt-4 space-y-2 text-white/70 text-sm"><li>Unlimited requests*</li><li>Website + SEO + Social</li><li>Dedicated manager</li></ul>
+        <a href="/contact.html" class="mt-6 inline-block px-5 py-2 rounded-full bg-purpleDeep hover:bg-[var(--purple)]">Choose</a>
+      </div>
+    </div>
+    <p class="text-xs text-white/50 mt-3">*Fair-use policy. Large app builds quoted separately.</p>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold">Let’s build something great</h2>
+      <p class="text-white/65 mt-2">Tell us your goals, examples, and timelines. We’ll reply with options and pricing.</p>
+      <div class="mt-6 space-y-3 text-white/75 text-sm">
+        <div class="flex items-center gap-2">📞 +91 90000 00000</div>
+        <div class="flex items-center gap-2">✉️ forsecondarywork1572027@gmail.com</div>
+        <div class="flex items-center gap-2">📍 India</div>
+      </div>
+    </div>
+    <form id="contactForm" class="card rounded-2xl p-6 backdrop-blur">
+      <input type="text" name="botCheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="grid gap-4">
+        <input name="name" required autocomplete="name" placeholder="Your Name" class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" aria-label="Your Name">
+        <input name="email" type="email" required autocomplete="email" placeholder="Your Email" class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" aria-label="Your Email">
+        <textarea name="message" rows="5" required placeholder="Tell us about your project..." class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" aria-label="Your Message"></textarea>
+      </div>
+      <button type="submit" id="submitBtn" class="mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purpleDeep hover:bg-[var(--purple)] font-semibold">
+        <span>Send Message</span>
+        <svg id="btnSpinner" class="w-4 h-4 hidden animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="3" opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-width="3"/></svg>
+        <svg id="btnCheck" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div id="formToast" class="hidden mt-4 text-sm"></div>
+    </form>
+  </div>
+</section>
+
+<script>
+const c = document.getElementById('particles'); if(c){ const ctx = c.getContext('2d'); let w, h, dpr; let pts=[]; const N=60;
+function resize(){ dpr=window.devicePixelRatio||1; w=window.innerWidth; h=window.innerHeight; c.width=w*dpr; c.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); }
+function reset(){ pts = Array.from({length:N},()=>({ x:Math.random()*w, y:Math.random()*h, vx:(Math.random()-.5)*0.4, vy:(Math.random()-.5)*0.4, r:Math.random()*2+0.5 })); }
+function loop(){ ctx.clearRect(0,0,w,h); ctx.globalAlpha = 0.8; ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--purple'); for(const p of pts){ p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>w) p.vx*=-1; if(p.y<0||p.y>h) p.vy*=-1; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill(); } requestAnimationFrame(loop); }
+resize(); reset(); loop(); window.addEventListener('resize', ()=>{ resize(); reset(); }, {passive:true}); }
+</script>
+</main>
+  <footer id="app-footer"></footer>
+  <button id="toTop" class="rounded-full p-3 bg-white/10 backdrop-blur border border-[var(--border)] hover:bg-white/15" aria-label="Scroll to top">↑</button>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

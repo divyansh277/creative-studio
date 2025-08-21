@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Creative Studio</title>
+  <meta name="description" content="Selected work across logo, web, video, and audio." />
+  <meta property="og:title" content="Portfolio — Creative Studio">
+  <meta property="og:description" content="Selected work across logo, web, video, and audio." />
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0b12" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={ theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }, colors: { purpleBrand:'#a855f7', purpleDeep:'#7c3aed' } } } };</script>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  
+  <header id="app-header"></header>
+  <main id="main" class="pt-24">
+<div class="max-w-7xl mx-auto px-6 py-10">
+  <div class="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+    <div>
+      <h1 class="text-3xl md:text-4xl font-bold">Portfolio</h1>
+      <p class="text-white/60">Filter by category and tap any image to view.</p>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <button class="filter-btn px-3 py-1.5 rounded-full border border-[var(--border)]" data-filter="all">All</button>
+      <button class="filter-btn px-3 py-1.5 rounded-full border border-[var(--border)]" data-filter="logo">Logo</button>
+      <button class="filter-btn px-3 py-1.5 rounded-full border border-[var(--border)]" data-filter="web">Web</button>
+      <button class="filter-btn px-3 py-1.5 rounded-full border border-[var(--border)]" data-filter="video">Video</button>
+      <button class="filter-btn px-3 py-1.5 rounded-full border border-[var(--border)]" data-filter="audio">Audio</button>
+    </div>
+  </div>
+  <div id="portfolioGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop" alt="Logo Design" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img" data-cat="logo">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop" alt="Website UI" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img" data-cat="web">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1200&auto=format&fit=crop" alt="Video Editing" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img" data-cat="video">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1558285308-1696d4464960?q=80&w=1200&auto=format&fit=crop" alt="Audio Studio" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img" data-cat="audio">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop" alt="Voice Dubbing" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img" data-cat="audio">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="Script Writing" class="rounded-2xl border border-[var(--border)] hover:opacity-90 cursor-zoom-in work-img" data-cat="logo">
+  </div>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button id="closeLightbox" class="rounded-full border border-[var(--border)] bg-black/40 px-3 py-1.5">Close ✕</button>
+    <img id="lightboxImg" alt="Full view" src="">
+  </div>
+</div>
+<script>
+// Portfolio interactivity (filter + lightbox)
+const buttons = document.querySelectorAll('.filter-btn');
+const grid = document.getElementById('portfolioGrid');
+buttons.forEach(b=> b.addEventListener('click', ()=>{
+  buttons.forEach(x=> x.classList.remove('bg-white/10'));
+  b.classList.add('bg-white/10');
+  const f = b.dataset.filter;
+  [...grid.children].forEach(it=>{ const show = f==='all' || it.dataset.cat===f; it.style.display = show? 'block':'none'; });
+}, {passive:true}));
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightboxImg');
+const closeLb = document.getElementById('closeLightbox');
+const imgs = [...document.querySelectorAll('.work-img')];
+let idx = -1;
+imgs.forEach((img,i)=> img.addEventListener('click', ()=>{ idx=i; lbImg.src = img.src; lb.classList.add('open'); }, {passive:true}));
+function closeLightboxFn(){ lb.classList.remove('open'); }
+closeLb.addEventListener('click', closeLightboxFn, {passive:true});
+lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLightboxFn(); }, {passive:true});
+window.addEventListener('keydown', (e)=>{ if(!lb.classList.contains('open')) return; if(e.key==='Escape') closeLightboxFn(); if(e.key==='ArrowRight'){ idx=(idx+1)%imgs.length; lbImg.src=imgs[idx].src;} if(e.key==='ArrowLeft'){ idx=(idx-1+imgs.length)%imgs.length; lbImg.src=imgs[idx].src;} });
+</script>
+</main>
+  <footer id="app-footer"></footer>
+  <button id="toTop" class="rounded-full p-3 bg-white/10 backdrop-blur border border-[var(--border)] hover:bg-white/15" aria-label="Scroll to top">↑</button>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

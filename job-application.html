@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apply for a Job — Creative Studio</title>
+  <meta name="description" content="Apply to Creative Studio — graphic design, video editing and more." />
+  <meta property="og:title" content="Apply for a Job — Creative Studio">
+  <meta property="og:description" content="Apply to Creative Studio — graphic design, video editing and more." />
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0b12" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={ theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }, colors: { purpleBrand:'#a855f7', purpleDeep:'#7c3aed' } } } };</script>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  
+  <header id="app-header"></header>
+  <main id="main" class="pt-24">
+<section class="grid place-items-center px-6 py-10">
+  <section class="card rounded-2xl p-6 w-full max-w-xl">
+    <header class="mb-4">
+      <h1 class="text-2xl font-bold">Job Application</h1>
+      <p class="text-white/60 text-sm">Tell us a bit about you. We’ll get back within 48 hours.</p>
+    </header>
+    <form id="jobForm" class="grid gap-4">
+      <input type="text" name="botCheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="grid gap-1">
+        <span class="text-sm text-white/70">Your Name</span>
+        <input name="name" required class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" placeholder="John Doe">
+      </label>
+      <label class="grid gap-1">
+        <span class="text-sm text-white/70">Phone</span>
+        <input name="phone" type="tel" required class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" placeholder="+91 90000 00000">
+      </label>
+      <label class="grid gap-1">
+        <span class="text-sm text-white/70">Email</span>
+        <input name="email" type="email" required class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" placeholder="you@example.com">
+      </label>
+      <label class="grid gap-1">
+        <span class="text-sm text-white/70">Role / Skills</span>
+        <input name="skills" required class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" placeholder="Graphic Design, Video Editing…">
+      </label>
+      <label class="grid gap-1">
+        <span class="text-sm text-white/70">Why should we hire you?</span>
+        <textarea name="message" rows="4" class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" placeholder="Briefly write about your work and links."></textarea>
+      </label>
+      <label class="grid gap-1">
+        <span class="text-sm text-white/70">Resume (PDF/DOC)</span>
+        <input name="resume" type="file" accept=".pdf,.doc,.docx" class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-2">
+      </label>
+      <button type="submit" id="applyBtn" class="mt-2 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purpleDeep hover:bg-[var(--purple)] font-semibold">
+        <span>Submit Application</span>
+        <svg id="btnSpinner" class="w-4 h-4 hidden animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="3" opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-width="3"/></svg>
+        <svg id="btnCheck" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div id="formToast" class="hidden text-sm"></div>
+    </form>
+  </section>
+</section>
+</main>
+  <footer id="app-footer"></footer>
+  <button id="toTop" class="rounded-full p-3 bg-white/10 backdrop-blur border border-[var(--border)] hover:bg-white/15" aria-label="Scroll to top">↑</button>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

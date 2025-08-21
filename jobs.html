@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jobs — Creative Studio</title>
+  <meta name="description" content="Apply for our latest opportunities." />
+  <meta property="og:title" content="Jobs — Creative Studio">
+  <meta property="og:description" content="Apply for our latest opportunities." />
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0b12" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={ theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }, colors: { purpleBrand:'#a855f7', purpleDeep:'#7c3aed' } } } };</script>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  
+  <header id="app-header"></header>
+  <main id="main" class="pt-24">
+<div class="max-w-7xl mx-auto px-6 py-10">
+  <div class="mb-8 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold">Job Offers</h1>
+    <p class="text-white/60">Apply for our latest opportunities below:</p>
+  </div>
+  <div class="grid md:grid-cols-2 gap-6">
+    <article class="card rounded-2xl p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h3 class="font-semibold text-xl">Graphic Designer</h3>
+          <p class="text-white/70 mt-1">Looking for a creative graphic designer skilled in Photoshop & Illustrator.</p>
+          <ul class="text-white/60 text-sm mt-3 list-disc pl-5">
+            <li>Adobe Photoshop, Illustrator</li>
+            <li>Branding & social creatives</li>
+            <li>Freshers welcome</li>
+          </ul>
+        </div>
+      </div>
+      <a href="/job-application.html" class="mt-6 inline-flex px-5 py-2 rounded-full bg-purpleDeep hover:bg-[var(--purple)]">Apply Now</a>
+    </article>
+    <article class="card rounded-2xl p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h3 class="font-semibold text-xl">Video Editor</h3>
+          <p class="text-white/70 mt-1">Experienced in Premiere Pro or After Effects to edit marketing content.</p>
+          <ul class="text-white/60 text-sm mt-3 list-disc pl-5">
+            <li>Adobe Premiere Pro, After Effects</li>
+            <li>Short-form & long-form video</li>
+            <li>Motion graphics a plus</li>
+          </ul>
+        </div>
+      </div>
+      <a href="/job-application.html" class="mt-6 inline-flex px-5 py-2 rounded-full bg-purpleDeep hover:bg-[var(--purple)]">Apply Now</a>
+    </article>
+  </div>
+</div>
+</main>
+  <footer id="app-footer"></footer>
+  <button id="toTop" class="rounded-full p-3 bg-white/10 backdrop-blur border border-[var(--border)] hover:bg-white/15" aria-label="Scroll to top">↑</button>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

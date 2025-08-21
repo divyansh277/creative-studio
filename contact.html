@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Creative Studio</title>
+  <meta name="description" content="Get in touch for design, web, video or audio work." />
+  <meta property="og:title" content="Contact — Creative Studio">
+  <meta property="og:description" content="Get in touch for design, web, video or audio work." />
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0b12" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={ theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }, colors: { purpleBrand:'#a855f7', purpleDeep:'#7c3aed' } } } };</script>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  
+  <header id="app-header"></header>
+  <main id="main" class="pt-24">
+<div class="max-w-6xl mx-auto px-6 py-10 grid lg:grid-cols-2 gap-8 items-start">
+  <div>
+    <h1 class="text-3xl md:text-4xl font-bold">Let’s build something great</h1>
+    <p class="text-white/65 mt-2">Tell us your goals, examples, and timelines. We’ll reply with options and pricing.</p>
+    <div class="mt-6 space-y-3 text-white/75 text-sm">
+      <div class="flex items-center gap-2">📞 +91 90000 00000</div>
+      <div class="flex items-center gap-2">✉️ forsecondarywork1572027@gmail.com</div>
+      <div class="flex items-center gap-2">📍 India</div>
+    </div>
+  </div>
+  <form id="contactForm" class="card rounded-2xl p-6 backdrop-blur">
+    <input type="text" name="botCheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="grid gap-4">
+      <input name="name" required autocomplete="name" placeholder="Your Name" class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" aria-label="Your Name">
+      <input name="email" type="email" required autocomplete="email" placeholder="Your Email" class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" aria-label="Your Email">
+      <textarea name="message" rows="5" required placeholder="Tell us about your project..." class="rounded-lg bg-white/5 border border-[var(--border)] px-4 py-3 outline-none focus:border-[var(--purple)]" aria-label="Your Message"></textarea>
+    </div>
+    <button type="submit" id="submitBtn" class="mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purpleDeep hover:bg-[var(--purple)] font-semibold">
+      <span>Send Message</span>
+      <svg id="btnSpinner" class="w-4 h-4 hidden animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="3" opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-width="3"/></svg>
+      <svg id="btnCheck" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div id="formToast" class="hidden mt-4 text-sm"></div>
+  </form>
+</div>
+</main>
+  <footer id="app-footer"></footer>
+  <button id="toTop" class="rounded-full p-3 bg-white/10 backdrop-blur border border-[var(--border)] hover:bg-white/15" aria-label="Scroll to top">↑</button>
+  <script src="/assets/main.js"></script>
+</body>
+</html>
